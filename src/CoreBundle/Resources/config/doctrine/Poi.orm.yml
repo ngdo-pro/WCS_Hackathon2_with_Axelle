@@ -1,0 +1,60 @@
+CoreBundle\Entity\Poi:
+    type: entity
+    table: null
+    repositoryClass: CoreBundle\Repository\PoiRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        type:
+            type: string
+            length: 255
+        typeDetail:
+            type: string
+            length: 255
+            nullable: true
+        name:
+            type: string
+            length: 255
+        adress:
+            type: string
+            length: 255
+        postalCode:
+            type: string
+            length: 255
+        city:
+            type: string
+            length: 255
+        phoneNumber:
+            type: string
+            length: 255
+        faxNumber:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+        websiteUrl:
+            type: string
+            length: 255
+        facebookUrl:
+            type: string
+            length: 255
+        grading:
+            type: string
+            length: 255
+        openingHours:
+            type: text
+        tariff:
+            type: text
+        lastUpdate:
+            type: string
+            length: 255
+        longitude:
+            type: float
+        latitude:
+            type: float
+    lifecycleCallbacks: {  }
