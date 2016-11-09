@@ -41,8 +41,6 @@ class DefaultController extends Controller
 
         $em->flush();
 
-
-
         return $this->render('CoreBundle:Default:index.html.twig');
     }
 

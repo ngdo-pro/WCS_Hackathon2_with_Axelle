@@ -5,12 +5,11 @@ core:
 login:
     path: /login
     defaults:
-        _controller: UserBundle:Security:login
+        _controller: UserBundle:User:login
 
 login_check:
     path: /login_check
 
 logout:
     path: /logout
-
 
