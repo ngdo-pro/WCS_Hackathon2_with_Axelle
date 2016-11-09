@@ -33,6 +33,6 @@ class UserController extends Controller
         ));
 
 
-        //TODO: penser à définir la securité sur certaines pages auxquelles on accède après s'être connecté (4méthodes possibles voir OC)
+        //TODO: penser à définir la securité sur certaines pages auxquelles on accède après s'être connecté (4 méthodes possibles voir OC)
     }
 }

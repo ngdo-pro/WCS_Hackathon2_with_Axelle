@@ -26,21 +26,23 @@ UserBundle\Entity\User:
         password:
             type: string
             length: '40'
-        country:
-            type: string
-            length: '40'
         city:
             type: string
             length: '50'
+        country:
+            type: string
+            length: '40'
         language:
             type: string
             length: '40'
         visitPoint:
-            type: float
+            type: integer
         creationPoint:
-            type: float
+            type: integer
         salt:
             type: string
             length: '40'
             unique: true
+        roles:
+            type: array
     lifecycleCallbacks: {  }
