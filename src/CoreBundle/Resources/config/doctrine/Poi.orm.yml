@@ -11,32 +11,32 @@ CoreBundle\Entity\Poi:
     fields:
         type:
             type: string
-            length: '100'
+            length: 255
         typeDetail:
             type: string
-            length: '100'
+            length: 255
             nullable: true
         name:
             type: string
-            length: '50'
+            length: 255
         adress:
             type: string
             length: 255
         postalCode:
             type: string
-            length: '5'
+            length: 255
         city:
             type: string
-            length: '100'
+            length: 255
         phoneNumber:
             type: string
-            length: '15'
+            length: 255
         faxNumber:
             type: string
-            length: '15'
+            length: 255
         email:
             type: string
-            length: '100'
+            length: 255
         websiteUrl:
             type: string
             length: 255
@@ -47,13 +47,12 @@ CoreBundle\Entity\Poi:
             type: string
             length: 255
         openingHours:
-            type: string
-            length: 255
+            type: text
         tariff:
+            type: text
+        lastUpdate:
             type: string
             length: 255
-        lastUpdate:
-            type: datetime
         longitude:
             type: float
         latitude:

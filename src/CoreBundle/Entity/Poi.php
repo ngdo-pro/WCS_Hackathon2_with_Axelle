@@ -86,7 +86,7 @@ class Poi
     private $tariff;
 
     /**
-     * @var \DateTime
+     * @var string
      */
     private $lastUpdate;
 
@@ -436,7 +436,7 @@ class Poi
     /**
      * Set lastUpdate
      *
-     * @param \DateTime $lastUpdate
+     * @param string $lastUpdate
      * @return Poi
      */
     public function setLastUpdate($lastUpdate)
@@ -449,7 +449,7 @@ class Poi
     /**
      * Get lastUpdate
      *
-     * @return \DateTime 
+     * @return string 
      */
     public function getLastUpdate()
     {
