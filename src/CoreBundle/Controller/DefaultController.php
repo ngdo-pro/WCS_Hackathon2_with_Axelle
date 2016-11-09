@@ -15,7 +15,7 @@ class DefaultController extends Controller
         $object = json_decode($json);
 
         foreach ($object->features as $feature){
-            if ($feature->properties->type !== "COMMERCE_ET_SERVICE" && $feature->properties->type !== "HEBERGEMENT_LOCATIF"){
+            if ($feature->properties->type !== "COMMERCE_ET_SERVICE" && $feature->properties->type !== "HEBERGEMENT_LOCATIF" && $feature->properties->type !== "HEBERGEMENT_COLLECTIF"){
                 $poi = new Poi();
                 $poi->setType($feature->properties->type);
                 $poi->setTypeDetail($feature->properties->type_detail);
