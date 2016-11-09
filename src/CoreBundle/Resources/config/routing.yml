@@ -1,3 +1,7 @@
-core_homepage:
+core_convert:
     path:     /convert/json/to/sql
     defaults: { _controller: CoreBundle:Default:index }
+
+core_homepage:
+    path:     /
+    defaults: { _controller: CoreBundle:Default:home }

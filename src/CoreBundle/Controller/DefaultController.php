@@ -45,4 +45,9 @@ class DefaultController extends Controller
 
         return $this->render('CoreBundle:Default:index.html.twig');
     }
+
+    public function homeAction()
+    {
+        return $this->render('CoreBundle:Default:index.html.twig');
+    }
 }
