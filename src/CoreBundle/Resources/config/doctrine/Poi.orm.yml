@@ -54,4 +54,8 @@ CoreBundle\Entity\Poi:
             length: 255
         lastUpdate:
             type: datetime
+        longitude:
+            type: float
+        latitude:
+            type: float
     lifecycleCallbacks: {  }
