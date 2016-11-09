@@ -17,23 +17,23 @@ class DefaultController extends Controller
         foreach ($object->features as $feature){
             if ($feature->properties->type !== "COMMERCE_ET_SERVICE" && $feature->properties->type !== "HEBERGEMENT_LOCATIF" && $feature->properties->type !== "HEBERGEMENT_COLLECTIF"){
                 $poi = new Poi();
-                $poi->setType($feature->properties->type);
-                $poi->setTypeDetail($feature->properties->type_detail);
-                $poi->setName($feature->properties->nom);
-                $poi->setAdress($feature->properties->adresse);
-                $poi->setPostalCode($feature->properties->codepostal);
-                $poi->setCity($feature->properties->commune);
-                $poi->setPhoneNumber($feature->properties->telephone);
-                $poi->setFaxNumber($feature->properties->fax);
-                $poi->setEmail($feature->properties->email);
-                $poi->setWebsiteUrl($feature->properties->siteweb);
-                $poi->setFacebookUrl($feature->properties->facebook);
-                $poi->setGrading($feature->properties->classement);
-                $poi->setOpeningHours($feature->properties->ouverture);
-                $poi->setTariff($feature->properties->tarifsenclair);
-                $poi->setLastUpdate($feature->properties->last_update);
-                $poi->setLongitude($feature->geometry->coordinates[0]);
-                $poi->setLatitude($feature->geometry->coordinates[1]);
+                $poi->setType(str_replace(array("\r", "\n"), ' ', $feature->properties->type));
+                $poi->setTypeDetail(str_replace(array("\r", "\n"), ' ', $feature->properties->type_detail));
+                $poi->setName(str_replace(array("\r", "\n"), ' ', $feature->properties->nom));
+                $poi->setAdress(str_replace(array("\r", "\n"), ' ', $feature->properties->adresse));
+                $poi->setPostalCode(str_replace(array("\r", "\n"), ' ', $feature->properties->codepostal));
+                $poi->setCity(str_replace(array("\r", "\n"), ' ', $feature->properties->commune));
+                $poi->setPhoneNumber(str_replace(array("\r", "\n"), ' ', $feature->properties->telephone));
+                $poi->setFaxNumber(str_replace(array("\r", "\n"), ' ', $feature->properties->fax));
+                $poi->setEmail(str_replace(array("\r", "\n"), ' ', $feature->properties->email));
+                $poi->setWebsiteUrl(str_replace(array("\r", "\n"), ' ', $feature->properties->siteweb));
+                $poi->setFacebookUrl(str_replace(array("\r", "\n"), ' ', $feature->properties->facebook));
+                $poi->setGrading(str_replace(array("\r", "\n"), ' ', $feature->properties->classement));
+                $poi->setOpeningHours(str_replace(array("\r", "\n"), ' ', $feature->properties->ouverture));
+                $poi->setTariff(str_replace(array("\r", "\n"), ' ', $feature->properties->tarifsenclair));
+                $poi->setLastUpdate(str_replace(array("\r", "\n"), ' ', $feature->properties->last_update));
+                $poi->setLongitude(str_replace(array("\r", "\n"), ' ', $feature->geometry->coordinates[0]));
+                $poi->setLatitude(str_replace(array("\r", "\n"), ' ', $feature->geometry->coordinates[1]));
                 $em->persist($poi);
             }
 
