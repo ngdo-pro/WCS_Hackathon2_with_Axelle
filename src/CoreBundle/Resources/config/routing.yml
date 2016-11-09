@@ -1,3 +1,7 @@
+core_poi:
+    resource: "@CoreBundle/Resources/config/routing/poi.yml"
+    prefix:   /poi
+
 core_homepage:
     path:     /convert/json/to/sql
     defaults: { _controller: CoreBundle:Default:index }

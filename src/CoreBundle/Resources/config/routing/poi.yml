@@ -1,0 +1,12 @@
+poi_index:
+    path:     /
+    defaults: { _controller: "CoreBundle:Poi:index" }
+    methods:  GET
+
+poi_show:
+    path:     /{id}/show
+    defaults: { _controller: "CoreBundle:Poi:show" }
+    methods:  GET
+
+
+

@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Poi</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ poi.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ poi.type }}</td>
+            </tr>
+            <tr>
+                <th>Typedetail</th>
+                <td>{{ poi.typeDetail }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ poi.name }}</td>
+            </tr>
+            <tr>
+                <th>Adress</th>
+                <td>{{ poi.adress }}</td>
+            </tr>
+            <tr>
+                <th>Postalcode</th>
+                <td>{{ poi.postalCode }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ poi.city }}</td>
+            </tr>
+            <tr>
+                <th>Phonenumber</th>
+                <td>{{ poi.phoneNumber }}</td>
+            </tr>
+            <tr>
+                <th>Faxnumber</th>
+                <td>{{ poi.faxNumber }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ poi.email }}</td>
+            </tr>
+            <tr>
+                <th>Websiteurl</th>
+                <td>{{ poi.websiteUrl }}</td>
+            </tr>
+            <tr>
+                <th>Facebookurl</th>
+                <td>{{ poi.facebookUrl }}</td>
+            </tr>
+            <tr>
+                <th>Grading</th>
+                <td>{{ poi.grading }}</td>
+            </tr>
+            <tr>
+                <th>Openinghours</th>
+                <td>{{ poi.openingHours }}</td>
+            </tr>
+            <tr>
+                <th>Tariff</th>
+                <td>{{ poi.tariff }}</td>
+            </tr>
+            <tr>
+                <th>Lastupdate</th>
+                <td>{{ poi.lastUpdate }}</td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td>{{ poi.longitude }}</td>
+            </tr>
+            <tr>
+                <th>Latitude</th>
+                <td>{{ poi.latitude }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('poi_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Pois list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Typedetail</th>
+                <th>Name</th>
+                <th>Adress</th>
+                <th>Postalcode</th>
+                <th>City</th>
+                <th>Phonenumber</th>
+                <th>Faxnumber</th>
+                <th>Email</th>
+                <th>Websiteurl</th>
+                <th>Facebookurl</th>
+                <th>Grading</th>
+                <th>Openinghours</th>
+                <th>Tariff</th>
+                <th>Lastupdate</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for poi in pois %}
+            <tr>
+                <td><a href="{{ path('poi_show', { 'id': poi.id }) }}">{{ poi.id }}</a></td>
+                <td>{{ poi.type }}</td>
+                <td>{{ poi.typeDetail }}</td>
+                <td>{{ poi.name }}</td>
+                <td>{{ poi.adress }}</td>
+                <td>{{ poi.postalCode }}</td>
+                <td>{{ poi.city }}</td>
+                <td>{{ poi.phoneNumber }}</td>
+                <td>{{ poi.faxNumber }}</td>
+                <td>{{ poi.email }}</td>
+                <td>{{ poi.websiteUrl }}</td>
+                <td>{{ poi.facebookUrl }}</td>
+                <td>{{ poi.grading }}</td>
+                <td>{{ poi.openingHours }}</td>
+                <td>{{ poi.tariff }}</td>
+                <td>{{ poi.lastUpdate }}</td>
+                <td>{{ poi.longitude }}</td>
+                <td>{{ poi.latitude }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('poi_show', { 'id': poi.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}
