@@ -41,8 +41,10 @@ class DefaultController extends Controller
 
         $em->flush();
 
-
-
         return $this->render('CoreBundle:Default:index.html.twig');
+    }
+
+    public function homeAction(){
+        return $this->render('core/home.html.twig');
     }
 }
