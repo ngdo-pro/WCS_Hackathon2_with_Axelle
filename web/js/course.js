@@ -8,7 +8,7 @@ function initMap() {
     var xhr = new XMLHttpRequest();
     var labels = '123456';
     var labelIndex = 0;
-    xhr.open('GET', '/course/ajax/' + courseId);
+    xhr.open('GET', '/parcours/ajax/' + courseId);
     xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){ //If request is ok
             pointsOfInterest = JSON.parse(xhr.responseText);
