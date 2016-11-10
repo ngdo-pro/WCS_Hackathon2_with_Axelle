@@ -8,7 +8,7 @@ core_convert:
 
 core_course:
       resource: "@CoreBundle/Resources/config/routing/course.yml"
-      prefix:   /course
+      prefix:   /parcours
 
 core_home:
       path: /
