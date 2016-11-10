@@ -1,12 +1,14 @@
 var map;
 function initMap() {
+    //getting the Point Of Interest's ID
     var poiId = document.getElementById("poi").innerHTML;
+    //Creating a XMLHttpRequest
     var xhr = new XMLHttpRequest(), poi;
     xhr.open('GET', '/poi/ajax/' + poiId);
     xhr.onreadystatechange = function(){
-        if(xhr.readyState == 4 && xhr.status == 200){
+        if(xhr.readyState == 4 && xhr.status == 200){ //If request is ok
             var poi = JSON.parse(xhr.responseText);
-            var coord = {lat: -34.397 , lng:  150.644};
+            var coord = {lat: poi.latitude , lng:  poi.longitude};
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: coord,
                 zoom: 18
