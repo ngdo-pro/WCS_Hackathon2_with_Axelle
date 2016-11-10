@@ -1,0 +1,24 @@
+CoreBundle\Entity\User:
+    type:  entity
+    table: fos_user
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        firstName:
+            type: string
+            length: '50'
+        lastName:
+            type: string
+            length: '50'
+        country:
+            type: string
+            length: '50'
+        city:
+            type: string
+            length: '50'
+        language:
+            type: string
+            length: '50'

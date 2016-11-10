@@ -1,0 +1,52 @@
+CoreBundle\Entity\Course:
+    type: entity
+    table: null
+    repositoryClass: CoreBundle\Repository\CourseRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            unique: true
+        duration:
+            type: string
+            length: 255
+        likes:
+            type: integer
+        sponsored:
+            type: boolean
+        author:
+            type: string
+            length: 255
+        origin:
+            type: integer
+        firstStage:
+            type: integer
+        secondStage:
+            type: integer
+        thirdStage:
+            type: integer
+        fourthStage:
+            type: integer
+            nullable: true
+        fifthStage:
+            type: integer
+            nullable: true
+    manyToMany:
+        pois:
+            targetEntity: Poi
+            inversedBy: courses
+            joinTable:
+                name: courses_pois
+                joinColumns:
+                    course_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    poi_id:
+                        referencedColumnName: id
+    lifecycleCallbacks: {  }

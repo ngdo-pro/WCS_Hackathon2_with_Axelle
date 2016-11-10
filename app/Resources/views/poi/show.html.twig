@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/map.css') }}">
+{% endblock %}
+{% block body %}
+    <h1>{{ poi.name }}</h1>
+    <div id="map"></div>
+    <div id="poi" class="hidden">{{ poi.id }}</div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('js/map.js') }}"></script>
+{% endblock %}
