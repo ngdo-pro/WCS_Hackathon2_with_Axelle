@@ -20,8 +20,6 @@ class UserController extends Controller
         // (fake password for example)
         $authenticationUtils = $this->get('security.authentication_utils');
 
-        $user = $this->getUser();
-
         return $this->render('UserBundle:Security:login.html.twig', array(
             'last_username' => $authenticationUtils->getLastUsername(),
             'error'         => $authenticationUtils->getLastAuthenticationError(),
