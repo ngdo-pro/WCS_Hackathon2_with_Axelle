@@ -11,13 +11,32 @@ class RegistrationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', null, array('label' => 'form.name', 'translation_domain' => 'FOSUserBundle'));
+            ->add('firstName', null, array('label'=>'Prénom'))
+            ->add('lastName', null, array('label'=>'Nom'))
+            ->add('language', null, array('label'=>'Langue'))
+            ->add('country', null, array('label'=>'Pays'))
+            ->add('city', null, array('label'=>'Ville'))
+        ;
     }
 
-    public function getParent()
+    public function getFirstName()
     {
-        return 'FOS\UserBundle\Form\Type\RegistrationFormType';
+        return $this->getBlockPrefix();
+    }
 
+    public function getLastName()
+    {
+        return $this->getBlockPrefix();
+    }
+
+    public function getCountry()
+    {
+        return $this->getBlockPrefix();
+    }
+
+    public function getCity()
+    {
+        return $this->getBlockPrefix();
     }
 
     public function getBlockPrefix()
@@ -25,8 +44,8 @@ class RegistrationType extends AbstractType
         return 'app_user_registration';
     }
 
-    public function getName()
+    public function getParent()
     {
-        return $this->getBlockPrefix();
+        return 'FOS\UserBundle\Form\Type\RegistrationFormType';
     }
 }

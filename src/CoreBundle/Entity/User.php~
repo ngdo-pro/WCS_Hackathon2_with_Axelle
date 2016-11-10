@@ -16,29 +16,18 @@ class User extends BaseUser
 {
     protected $id;
 
-    /**
-     * @var string
-     */
-    protected $name;
-
-
-
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-
+    protected $firstName;
 
     /**
      * Set name
      *
-     * @param string $name
+     * @param $firstName
      * @return User
+     * @internal param string $name
      */
-    public function setName($name)
+    public function setFirstName($firstName)
     {
-        $this->name = $name;
+        $this->firstName = $firstName;
 
         return $this;
     }
@@ -46,10 +35,39 @@ class User extends BaseUser
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
-    public function getName()
+    public function getFirstName()
     {
-        return $this->name;
+        return $this->firstName;
+    }
+    /**
+     * @var string
+     */
+    private $lastName;
+
+
+    /**
+     * Set lastName
+     *
+     * @param string $lastName
+     *
+     * @return User
+     */
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * Get lastName
+     *
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
     }
 }
