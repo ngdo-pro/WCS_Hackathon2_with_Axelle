@@ -16,7 +16,7 @@ function initMap() {
             var contentString = '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
-                '<h1 id="firstHeading" class="firstHeading">' + poi.name + '</h1>'+
+                '<h6 id="firstHeading" class="firstHeading">' + poi.name + '</h6>'+
                 '<div id="bodyContent">'+
                 '<p>' + poi.typeDetail + '</p>'+
                 '<p>' + poi.adress + '</p>'+

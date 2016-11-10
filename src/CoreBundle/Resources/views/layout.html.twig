@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Investiga'Lyon | Visitez Lyon et découvrez tous les jours de nouveaux trésors dans la ville. {% endblock %}</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -13,9 +14,14 @@
         <nav>
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">Logo</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="sass.html">S'enregistrer</a></li>
                     <li><a href="badges.html">Se connecter</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
                 </ul>
             </div>
         </nav>
@@ -49,6 +55,7 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANy9jXdxKSIrwwM4o-mZoSLpsE3paCLJI&callback=initMap"
                 async defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
         {% block javascripts %}{% endblock %}
 
     </body>
