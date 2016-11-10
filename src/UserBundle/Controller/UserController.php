@@ -22,12 +22,6 @@ class UserController extends Controller
 
         $user = $this->getUser();
 
-        if (null === $user) {
-            // Ici, l'utilisateur est anonyme ou l'URL n'est pas derrière un pare-feu
-        } else {
-            // Ici, $user est une instance de notre classe User
-        }
-
         return $this->render('UserBundle:Security:login.html.twig', array(
             'last_username' => $authenticationUtils->getLastUsername(),
             'error'         => $authenticationUtils->getLastAuthenticationError(),
