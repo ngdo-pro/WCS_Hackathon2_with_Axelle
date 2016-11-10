@@ -5,3 +5,7 @@ core_poi:
 core_homepage:
     path:     /convert/json/to/sql
     defaults: { _controller: CoreBundle:Default:index }
+
+core_course:
+        resource: "@CoreBundle/Resources/config/routing/course.yml"
+        prefix:   /course

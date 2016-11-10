@@ -12,4 +12,14 @@ use Doctrine\ORM\EntityRepository;
  */
 class PoiRepository extends EntityRepository
 {
+    public function findTheStages($originId, $stage1Id, $stage2Id, $stage3Id){
+        $query = $this->createQueryBuilder('s')
+            ->where('s.id = ' . $originId)
+            ->orWhere('s.id = ' . $stage1Id)
+            ->orWhere('s.id = ' . $stage2Id)
+            ->orWhere('s.id = ' . $stage3Id)
+            ->getQuery();
+
+        return $query->getResult();
+    }
 }
