@@ -1,29 +1,61 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: nicolas
- * Date: 10/11/16
- * Time: 05:52
- */
 
 namespace CoreBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
-
-
+/**
+ * User
+ */
 class User extends BaseUser
 {
+    /**
+     * @var integer
+     */
     protected $id;
 
-    protected $firstName;
+    /**
+     * @var string
+     */
+    private $firstName;
 
     /**
-     * Set name
+     * @var string
+     */
+    private $lastName;
+
+    /**
+     * @var string
+     */
+    private $country;
+
+    /**
+     * @var string
+     */
+    private $city;
+
+    /**
+     * @var string
+     */
+    private $language;
+
+
+    /**
+     * Get id
      *
-     * @param $firstName
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set firstName
+     *
+     * @param string $firstName
+     *
      * @return User
-     * @internal param string $name
      */
     public function setFirstName($firstName)
     {
@@ -33,7 +65,7 @@ class User extends BaseUser
     }
 
     /**
-     * Get name
+     * Get firstName
      *
      * @return string
      */
@@ -41,11 +73,6 @@ class User extends BaseUser
     {
         return $this->firstName;
     }
-    /**
-     * @var string
-     */
-    private $lastName;
-
 
     /**
      * Set lastName
@@ -70,21 +97,6 @@ class User extends BaseUser
     {
         return $this->lastName;
     }
-    /**
-     * @var string
-     */
-    private $country;
-
-    /**
-     * @var string
-     */
-    private $city;
-
-    /**
-     * @var string
-     */
-    private $language;
-
 
     /**
      * Set country

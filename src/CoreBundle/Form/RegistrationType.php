@@ -1,5 +1,5 @@
 <?php
-// src/AppBundle/Form/RegistrationType.php
+// src/CoreBundle/Form/RegistrationType.php
 
 namespace CoreBundle\Form;
 
