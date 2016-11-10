@@ -11,4 +11,5 @@ core_course:
       prefix:   /course
 
 core_home:
+      path: /
       defaults: { _controller: CoreBundle:Default:home }
