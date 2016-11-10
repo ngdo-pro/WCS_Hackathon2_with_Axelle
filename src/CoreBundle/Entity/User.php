@@ -22,13 +22,10 @@ class User extends BaseUser
     protected $name;
 
 
-
     public function __construct()
     {
         parent::__construct();
     }
-
-
 
     /**
      * Set name
@@ -46,7 +43,7 @@ class User extends BaseUser
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {

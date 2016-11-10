@@ -7,5 +7,5 @@ core_homepage:
     defaults: { _controller: CoreBundle:Default:index }
 
 core_course:
-        resource: "@CoreBundle/Resources/config/routing/course.yml"
-        prefix:   /course
+      resource: "@CoreBundle/Resources/config/routing/course.yml"
+      prefix:   /course
