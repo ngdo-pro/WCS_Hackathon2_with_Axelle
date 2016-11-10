@@ -29,7 +29,7 @@ class LoadUser implements FixtureInterface
             "visitPoint" => 0,
             "creationPoint" => 0,
             "roles" => "ROLE_USER",
-            "salt" => "jdhdfe98asfjélshfvéosiyagv15"
+            "salt" => ""
         );
 
         $nicole = array(
@@ -44,7 +44,7 @@ class LoadUser implements FixtureInterface
             "visitPoint" => 0,
             "creationPoint" => 0,
             "roles" => "ROLE_USER",
-            "salt" => "dslfheoaéihgéawkfjàapwf"
+            "salt" => ""
         );
 
         $john = array(
@@ -59,7 +59,7 @@ class LoadUser implements FixtureInterface
             "visitPoint" => 0,
             "creationPoint" => 0,
             "roles" => "ROLE_USER",
-            "salt" => "aposirpweuotrpawiufpafadfras"
+            "salt" => ""
         );
 
         $listUsers = array($james, $nicole, $john);

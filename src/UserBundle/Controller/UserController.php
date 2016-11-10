@@ -21,6 +21,7 @@ class UserController extends Controller
         $authenticationUtils = $this->get('security.authentication_utils');
 
         $user = $this->getUser();
+
         if (null === $user) {
             // Ici, l'utilisateur est anonyme ou l'URL n'est pas derrière un pare-feu
         } else {
@@ -31,7 +32,6 @@ class UserController extends Controller
             'last_username' => $authenticationUtils->getLastUsername(),
             'error'         => $authenticationUtils->getLastAuthenticationError(),
         ));
-
 
         //TODO: penser à définir la securité sur certaines pages auxquelles on accède après s'être connecté (4 méthodes possibles voir OC)
     }
