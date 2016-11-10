@@ -332,4 +332,49 @@ class Course
     {
         return $this->fifthStage;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $pois;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->pois = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add pois
+     *
+     * @param \CoreBundle\Entity\Poi $pois
+     * @return Course
+     */
+    public function addPois(\CoreBundle\Entity\Poi $pois)
+    {
+        $this->pois[] = $pois;
+
+        return $this;
+    }
+
+    /**
+     * Remove pois
+     *
+     * @param \CoreBundle\Entity\Poi $pois
+     */
+    public function removePois(\CoreBundle\Entity\Poi $pois)
+    {
+        $this->pois->removeElement($pois);
+    }
+
+    /**
+     * Get pois
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPois()
+    {
+        return $this->pois;
+    }
 }

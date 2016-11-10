@@ -501,4 +501,49 @@ class Poi
     {
         return $this->latitude;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $courses;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->courses = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add courses
+     *
+     * @param \CoreBundle\Entity\Course $courses
+     * @return Poi
+     */
+    public function addCourse(\CoreBundle\Entity\Course $courses)
+    {
+        $this->courses[] = $courses;
+
+        return $this;
+    }
+
+    /**
+     * Remove courses
+     *
+     * @param \CoreBundle\Entity\Course $courses
+     */
+    public function removeCourse(\CoreBundle\Entity\Course $courses)
+    {
+        $this->courses->removeElement($courses);
+    }
+
+    /**
+     * Get courses
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCourses()
+    {
+        return $this->courses;
+    }
 }
