@@ -4,6 +4,8 @@ namespace CoreBundle\Controller;
 
 use CoreBundle\Entity\Poi;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\BrowserKit\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 
 /**
@@ -33,9 +35,29 @@ class PoiController extends Controller
      */
     public function showAction(Poi $poi)
     {
-
         return $this->render('poi/show.html.twig', array(
             'poi' => $poi,
         ));
+    }
+
+    public function ajaxAction(Poi $poi)
+    {
+        $data['latitude'] = $poi->getLatitude();
+        $data['longitude'] = $poi->getLongitude();
+        $data['name'] = $poi->getName();
+        $data['type'] = $poi->getType();
+        $data['typeDetail'] = $poi->getTypeDetail();
+        $data['adress'] = $poi->getAdress();
+        $data['postalCode'] = $poi->getPostalCode();
+        $data['city'] = $poi->getCity();
+        $data['phoneNumber'] = $poi->getPhoneNumber();
+        $data['faxNumber'] = $poi->getFaxNumber();
+        $data['email'] = $poi->getEmail();
+        $data['websiteUrl'] = $poi->getWebsiteUrl();
+        $data['facebookUrl'] = $poi->getFacebookUrl();
+        $data['grading'] = $poi->getGrading();
+        $data['openingHours'] = $poi->getOpeningHours();
+        $data['tariff'] = $poi->getTariff();
+        return new JsonResponse($data);
     }
 }

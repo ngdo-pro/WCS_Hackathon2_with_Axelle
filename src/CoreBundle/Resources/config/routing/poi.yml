@@ -8,5 +8,7 @@ poi_show:
     defaults: { _controller: "CoreBundle:Poi:show" }
     methods:  GET
 
-
-
+poi_ajax:
+    path:     /ajax/{id}
+    defaults: { _controller: "CoreBundle:Poi:ajax"}
+    methods: GET
