@@ -6,7 +6,7 @@
 {% block body %}
     <h1>Course </h1>
     <div id="map"></div>
-    <div id="course">{{ course.id }}</div>
+    <div id="course" class="hidden">{{ course.id }}</div>
 {% endblock %}
 {% block javascripts %}
     <script src="{{ asset('js/course.js') }}"></script>
