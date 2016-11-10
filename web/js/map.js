@@ -1,7 +1,7 @@
 var map;
 function initMap() {
     var poiId = document.getElementById("poi").innerHTML;
-    var xhr = new XMLHttpRequest(), monResultat;
+    var xhr = new XMLHttpRequest(), poi;
     xhr.open('GET', '/poi/ajax/' + poiId);
     xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
