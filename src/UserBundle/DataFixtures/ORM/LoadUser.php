@@ -9,9 +9,9 @@
 
 namespace UserBundle\DataFixtures\ORM;
 
-use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use UserBundle\Entity\User;
+use Doctrine\Common\DataFixtures\FixtureInterface;
 
 class LoadUser implements FixtureInterface
 {
