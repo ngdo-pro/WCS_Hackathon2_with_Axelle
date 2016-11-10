@@ -343,6 +343,10 @@ class Course
     public function __construct()
     {
         $this->pois = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->duration = "1";
+        $this->likes = 0;
+        $this->sponsored = false;
+        $this->author = "Wild Code School";
     }
 
     /**

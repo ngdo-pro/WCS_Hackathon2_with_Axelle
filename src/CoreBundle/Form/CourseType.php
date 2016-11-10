@@ -13,7 +13,12 @@ class CourseType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('duration')->add('likes')->add('sponsored')->add('author')->add('origin')->add('firstStage')->add('secondStage')->add('thirdStage')->add('fourthStage')->add('fifthStage');
+        $builder
+            ->add('name')
+            ->add('origin')
+            ->add('firstStage')
+            ->add('secondStage')
+            ->add('thirdStage');
     }
     
     /**

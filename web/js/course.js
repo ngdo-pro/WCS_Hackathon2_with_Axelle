@@ -8,7 +8,7 @@ function initMap() {
     var xhr = new XMLHttpRequest();
     var labels = '123456';
     var labelIndex = 0;
-    xhr.open('GET', '/course/ajax/' + courseId);
+    xhr.open('GET', '/parcours/ajax/' + courseId);
     xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){ //If request is ok
             pointsOfInterest = JSON.parse(xhr.responseText);
@@ -38,60 +38,60 @@ function initMap() {
             var contentOrigin = '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
-                '<h1 id="firstHeading" class="firstHeading">' + pointsOfInterest[0].name + '</h1>'+
+                '<h6 id="firstHeading" class="firstHeading"  class="z-depth-3">' + pointsOfInterest[0].name + '</h6>'+
                 '<div id="bodyContent">'+
-                '<p>' + pointsOfInterest[0].typeDetail + '</p>'+
-                '<p>' + pointsOfInterest[0].adress + '</p>'+
-                '<p>' + pointsOfInterest[0].postalCode + '</p>'+
-                '<p>' + pointsOfInterest[0].city + '</p>'+
-                '<p>' + pointsOfInterest[0].phoneNumber + '</p>'+
-                '<p>' + pointsOfInterest[0].openingHours + '</p>'+
-                '<p>' + pointsOfInterest[0].tariff + '</p>'+
+                pointsOfInterest[0].typeDetail + '<br />'+
+                pointsOfInterest[0].adress + '<br />'+
+                pointsOfInterest[0].postalCode + '<br />'+
+                pointsOfInterest[0].city + '<br />'+
+                pointsOfInterest[0].phoneNumber + '<br />'+
+                pointsOfInterest[0].openingHours + '<br />'+
+                pointsOfInterest[0].tariff + '<br />'+
                 '</div>'+
                 '</div>';
 
-            var contentFirstStage = '<div id="content">'+
+            var contentFirstStage = '<div id="content"  class="z-depth-3">'+
                 '<div id="siteNotice">'+
                 '</div>'+
-                '<h1 id="firstHeading" class="firstHeading">' + pointsOfInterest[1].name + '</h1>'+
+                '<h6 id="firstHeading" class="firstHeading">' + pointsOfInterest[1].name + '</h6>'+
                 '<div id="bodyContent">'+
-                '<p>' + pointsOfInterest[1].typeDetail + '</p>'+
-                '<p>' + pointsOfInterest[1].adress + '</p>'+
-                '<p>' + pointsOfInterest[1].postalCode + '</p>'+
-                '<p>' + pointsOfInterest[1].city + '</p>'+
-                '<p>' + pointsOfInterest[1].phoneNumber + '</p>'+
-                '<p>' + pointsOfInterest[1].openingHours + '</p>'+
-                '<p>' + pointsOfInterest[1].tariff + '</p>'+
+                pointsOfInterest[1].typeDetail + '<br />'+
+                pointsOfInterest[1].adress + '<br />'+
+                pointsOfInterest[1].postalCode + '<br />'+
+                pointsOfInterest[1].city + '<br />'+
+                pointsOfInterest[1].phoneNumber + '<br />'+
+                pointsOfInterest[1].openingHours + '<br />'+
+                pointsOfInterest[1].tariff + '<br />'+
                 '</div>'+
                 '</div>';
 
-            var contentSecondStage = '<div id="content">'+
+            var contentSecondStage = '<div id="content"  class="z-depth-3">'+
                 '<div id="siteNotice">'+
                 '</div>'+
-                '<h1 id="firstHeading" class="firstHeading">' + pointsOfInterest[2].name + '</h1>'+
+                '<h6 id="firstHeading" class="firstHeading">' + pointsOfInterest[2].name + '</h6>'+
                 '<div id="bodyContent">'+
-                '<p>' + pointsOfInterest[2].typeDetail + '</p>'+
-                '<p>' + pointsOfInterest[2].adress + '</p>'+
-                '<p>' + pointsOfInterest[2].postalCode + '</p>'+
-                '<p>' + pointsOfInterest[2].city + '</p>'+
-                '<p>' + pointsOfInterest[2].phoneNumber + '</p>'+
-                '<p>' + pointsOfInterest[2].openingHours + '</p>'+
-                '<p>' + pointsOfInterest[2].tariff + '</p>'+
+                pointsOfInterest[2].typeDetail + '<br />'+
+                pointsOfInterest[2].adress + '<br />'+
+                pointsOfInterest[2].postalCode + '<br />'+
+                pointsOfInterest[2].city + '<br />'+
+                pointsOfInterest[2].phoneNumber + '<br />'+
+                pointsOfInterest[2].openingHours + '<br />'+
+                pointsOfInterest[2].tariff + '<br />'+
                 '</div>'+
                 '</div>';
 
             var contentThirdStage = '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
-                '<h1 id="firstHeading" class="firstHeading">' + pointsOfInterest[3].name + '</h1>'+
+                '<h6 id="firstHeading" class="firstHeading"  class="z-depth-3">' + pointsOfInterest[3].name + '</h6>'+
                 '<div id="bodyContent">'+
-                '<p>' + pointsOfInterest[3].typeDetail + '</p>'+
-                '<p>' + pointsOfInterest[3].adress + '</p>'+
-                '<p>' + pointsOfInterest[3].postalCode + '</p>'+
-                '<p>' + pointsOfInterest[3].city + '</p>'+
-                '<p>' + pointsOfInterest[3].phoneNumber + '</p>'+
-                '<p>' + pointsOfInterest[3].openingHours + '</p>'+
-                '<p>' + pointsOfInterest[3].tariff + '</p>'+
+                pointsOfInterest[3].typeDetail + '<br />'+
+                pointsOfInterest[3].adress + '<br />'+
+                pointsOfInterest[3].postalCode + '<br />'+
+                pointsOfInterest[3].city + '<br />'+
+                pointsOfInterest[3].phoneNumber + '<br />'+
+                pointsOfInterest[3].openingHours + '<br />'+
+                pointsOfInterest[3].tariff + '<br />'+
                 '</div>'+
                 '</div>';
 

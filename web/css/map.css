@@ -1,8 +1,9 @@
 #map{
-    height: 600px;
-    width: 600px;
+    height: 100vh;
+    margin: auto;
+    width: 90vw;
 }
 
-#poi{
+.hidden{
     display: none;
 }

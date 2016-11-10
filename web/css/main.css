@@ -44,3 +44,24 @@ a.brand-logo {
     background-size: cover;
     height: 100%;
 }
+
+#register-page .row {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+}
+
+#register-page h1 {
+    font-family: 'Rouge Script', cursive;
+    font-size: 3em;
+    color: red;
+    margin-top:0;
+    text-align: center;
+
+}
+#register-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 10vh;
+    padding: 20px;
+    font-size: 1em;
+    color: #333333;
+}
